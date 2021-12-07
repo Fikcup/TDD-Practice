@@ -19,6 +19,11 @@ describe("Coffee", () => {
             const err = new Error("Expected parameter 'quantity' to be of type number");
 
             expect(coffee).toThrowError(err);
-        })
+        });
+        it("should throw an error if provided no arguments", () => {
+            const coffee = () => new Coffee();
+
+            expect(coffee).toThrow();
+        });
     });
 });
