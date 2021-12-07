@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "jest --watchAll --verbose"
+  },
   "dependencies": {
     "jest": "^27.4.3"
   }
