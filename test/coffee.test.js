@@ -25,5 +25,11 @@ describe("Coffee", () => {
 
             expect(coffee).toThrow();
         });
+        it("should throw an error if quantity is not provided", () => {
+            const coffee = () => new Coffee("Black");
+            const err = new Error("Expected parameter 'quantity' to be of type number");
+
+            expect(coffee).toThrowError(err);
+        });
     });
 });
