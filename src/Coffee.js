@@ -12,6 +12,10 @@ class Coffee {
         this.name = name;
         this.quantity = quantity;
     }
+
+    changeQuantity(quantity) {
+        this.quantity = quantity;
+    }
 }
 
 module.exports = Coffee;

@@ -32,4 +32,13 @@ describe("Coffee", () => {
             expect(coffee).toThrowError(err);
         });
     });
+
+    describe("Modify quantity", () => {
+        describe("quantity should be modified", () => {
+            const coffee = new Coffee("Black", 1);
+            coffee.changeQuantity(4);
+
+            expect(coffee.quantity).toBe(4);
+        });
+    });
 });
