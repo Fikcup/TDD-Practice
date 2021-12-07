@@ -31,6 +31,12 @@ describe("Coffee", () => {
 
             expect(coffee).toThrowError(err);
         });
+        it("should not allow a quantity less than one", () => {
+            const coffee = () => new Coffee("Black", -3);
+            const err = new Error("Quantity must be equal to or greater than one.");
+
+            expect(coffee).toThrowError(err);
+        })
     });
 
     describe("Modify quantity", () => {

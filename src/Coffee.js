@@ -9,6 +9,10 @@ class Coffee {
             throw new Error("Expected parameter 'quantity' to be of type number");
         }
 
+        if (quantity < 1) {
+            throw new Error ("Quantity must be equal to or greater than one.");
+        }
+
         this.name = name;
         this.quantity = quantity;
     }
