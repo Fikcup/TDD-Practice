@@ -1,6 +1,7 @@
 class Coffee {
     constructor(name, quantity) {
-        console.log(typeof name);
+        const cost = 4.50;
+
         if (typeof name !== "string") {
             throw new Error("Expected parameter 'name' to be of type String");
         }
@@ -15,6 +16,7 @@ class Coffee {
 
         this.name = name;
         this.quantity = quantity;
+        this.price = cost * this.quantity;
     }
 
     changeQuantity(quantity) {

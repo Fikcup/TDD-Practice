@@ -36,6 +36,12 @@ describe("Coffee", () => {
             const err = new Error("Quantity must be equal to or greater than one.");
 
             expect(coffee).toThrowError(err);
+        });
+        it("should have a price equal to quantity times 4.50", () => {
+            const coffee = new Coffee("Black", 4);
+            const cost = 4 * 4.50;
+
+            expect(coffee.price).toBe(cost);
         })
     });
 
