@@ -46,7 +46,7 @@ describe("Coffee", () => {
     });
 
     describe("Modify quantity", () => {
-        describe("quantity should be modified", () => {
+        it("quantity should be modified", () => {
             const coffee = new Coffee("Black", 1);
             coffee.changeQuantity(4);
 
