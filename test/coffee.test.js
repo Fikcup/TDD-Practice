@@ -14,5 +14,11 @@ describe("Coffee", () => {
 
             expect(coffee).toThrowError(err);
         });
+        it("should throw an error if age isn't of type number", () => {
+            const coffee = () => new Coffee("Black", "1");
+            const err = new Error("Expected parameter 'quantity' to be of type number");
+
+            expect(coffee).toThrowError(err);
+        })
     });
 });

@@ -5,6 +5,10 @@ class Coffee {
             throw new Error("Expected parameter 'name' to be of type String");
         }
 
+        if (typeof quantity !== "number") {
+            throw new Error("Expected parameter 'quantity' to be of type number");
+        }
+
         this.name = name;
         this.quantity = quantity;
     }
