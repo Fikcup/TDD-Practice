@@ -7,6 +7,12 @@ describe("Coffee", () => {
             
             expect(coffee.name).toBe("Black");
             expect(coffee.quantity).toBe(1);
-        })
+        });
+        it("should throw an error if name isn't of type string", () => {
+            const coffee = () => new Coffee(3, 1);
+            const err = new Error("Expected parameter 'name' to be of type String");
+
+            expect(coffee).toThrowError(err);
+        });
     });
 });
